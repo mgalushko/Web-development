@@ -10,7 +10,16 @@ public class Automobile {
         @GeneratedValue(strategy= GenerationType.AUTO)
         private Integer id;
         private String name;
-        private Double Cost;
+        private Integer Cost;
+        private String Body;
+
+         public String getBody() {
+             return Body;
+         }
+
+         public void setBody(String body) {
+             Body = body;
+         }
 
          public Integer getId() {
              return id;
@@ -20,6 +29,7 @@ public class Automobile {
              this.id = id;
          }
 
+
          public String getName() {
              return name;
          }
@@ -28,11 +38,11 @@ public class Automobile {
              this.name = name;
          }
 
-         public Double getCost() {
+         public Integer getCost() {
              return Cost;
          }
 
-         public void setCost(Double cost) {
+         public void setCost(Integer cost) {
              Cost = cost;
          }
      }

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Корзина</title>
+    <link rel="stylesheet" th:href="@{css/maincss.css}"/>
+</head>
+<body>
+<h1> Корзина товаров </h1>
+<table id="table2">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Delete</th>
+    </tr>
+    <tr th:each="cart, iterStat : ${carts}">
+        <td th:text="${cart}"></td>
+        <td th:text="${costs[iterStat.index]}"></td>
+        <td><input type="submit"  class="remove_item" value="Убрать" ></td>
+    </tr>
+    <tr>
+        <td>Final Price</td>
+        <td><span id="FinalPrice"> </span></td>
+        <td><input type="submit" onclick="loaddb()" value="Заказать"> </td>
+    </tr>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" th:src="@{../js/my.js}"></script>
+</body>
+</html>

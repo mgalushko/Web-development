@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "9755826b-e3ae-4684-bf50-9816052b4c0e",
+		"name": "Postman files",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "testRequest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "eb3902c1-9030-47f9-bb8b-ac520630dbad",
+						"exec": [
+							"pm.test(\"Status is ok, response is json\", function () {\r",
+							"    pm.response.to.be.ok; // проверка статуса\r",
+							"    pm.response.to.be.json; // проверка формата\r",
+							"});\r",
+							"\r",
+							"try {\r",
+							"    // сохраняем userId из json ответа в переменную окружения\r",
+							"    pm.environment.set(\"userId\", pm.response.json().args.userId);\r",
+							"} catch(e) {\r",
+							"    // выводим исключение в консоль\r",
+							"    console.log(e);\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo.com/get?userId=777",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "777"
+						}
+					]
+				},
+				"description": "https://software-testing.ru/library/testing/testing-tools/2638-postman"
+			},
+			"response": []
+		},
+		{
+			"name": "testRequest2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "483fb8fc-b9f4-4256-a5e0-7eac5b8a93a3",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/6",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"6"
+					]
+				},
+				"description": "https://habr.com/ru/company/kolesa/blog/351250/"
+			},
+			"response": []
+		},
+		{
+			"name": "testRequest3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "babc5274-ea68-48f1-ba67-8a83825faf22",
+						"exec": [
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "yandex.ru",
+					"host": [
+						"yandex",
+						"ru"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,70 @@
+body {
+    background-color: #A0D6B4;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Segoe UI";
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-weight: normal;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    color: white;
+}
+
+table td {
+    border: 1px solid #C0DCC0;
+    padding: 10px;
+    text-align: center;
+}
+#Cart {
+
+    float: right;
+    margin-right: 75px;
+}
+
+table th {
+    padding: 10px;
+}
+#filter {
+    border: 0px solid #54FF9F;
+}
+#city {
+    border: 2px solid black;
+}
+.form-control {
+    width: 250px;
+}
+.input-group {
+    width: 200px;
+    margin: 0 auto;
+}
+
+
+.desc {
+    display: block;
+    margin-left: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.desc p {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.center {
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+}

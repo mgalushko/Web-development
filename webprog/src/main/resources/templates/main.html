@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Автомобили</title>
+    <link rel="stylesheet" th:href="@{css/maincss.css}"/>
+
+
+</head>
+
+<body>
+<h1>Интернет-магазин автомобилей</h1>
+<div id="Cart">
+    <a  href="http://localhost:8080/cart">
+        <img th:src="'images/1.png'">
+    </a>
+</div>
+<div>
+    Выберите свой город
+    <select name="city" id="city">
+        <option value="Пермь">Пермь</option>
+        <option value="Москва">Москва</option>
+    </select>
+
+</div>
+<div id="filter">
+    <input type="text" class="form-control" placeholder="Найти модель..." id="search-text" aria-describedby="basic-addon1" onkeyup="tableSearch()" />
+</div>
+<table id="table">
+    <tr>
+        <th></th>
+        <th>Модель</th>
+        <th>Цена</th>
+        <th>Кузов</th>
+        <th></th>
+    </tr>
+    <tr th:each="item : ${automobiles}" class="table-data">
+        <td width="40%"><img th:src="'images/' + ${item.name} + '.jpg'" alt="Car" height = "15%" width="100%" class="center"></td>
+        <td width="20%" class="automobilename" th:text="${item.name}"></td>
+        <td class="automobilecost" th:text="${item.cost}"></td>
+        <td th:text="${item.body}"></td>
+        <td> <input type="submit" class="add_item" value="Добавить" ></td>
+    </tr>
+</table>
+</div>
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" th:src="@{../js/my.js}"></script>
+
+<!--<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>-->
+</body>
+</html>
