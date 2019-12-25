@@ -1,0 +1,85 @@
+body {
+  background-color: #A0D6B4;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Segoe UI";
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-weight: normal;
+}
+.Cart
+{
+  position: absolute;
+  top:20%;
+  left: 40%;
+  padding: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border: 3px solid #C0DCC0;
+  background-color: #A0D6B4;
+  text-align: center;
+  font-size: large;
+  color: #ffffff;
+}
+
+table {
+  border: 1px solid #C0DCC0;
+  width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  color: white;
+}
+
+table td {
+  border: 1px solid #C0DCC0;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  border: 3px solid #C0DCC0;
+  padding: 10px;
+}
+
+button
+{
+  background-color: #A0D6B4;
+  color: white;
+  border: 1px solid #C0DCC0;
+  padding: 10px;
+}
+
+button:hover
+{
+  background-color: rgb(70,70,70);
+  border: 1px solid white;
+}
+
+
+.App-header {
+  background-color: #A0D6B4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
